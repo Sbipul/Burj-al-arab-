@@ -1,0 +1,33 @@
+.react_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 50px auto;
+    padding:10px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px grey,-5px -5px 5px rgb(238, 238, 238);
+}
+.inputGroup {
+    display: block;
+    margin: .7rem;
+    width: 100%;
+    padding: 5px;
+    font-size: 22px;
+}
+.inputBtn{
+    width: 25%;
+    margin: .7rem;
+    display: block;
+    padding: 5px;
+    font-size: 22px;
+}
+.googleBtn {
+    background: rgb(255 255 255);
+    padding: 7px;
+    margin: .7rem;
+    font-size: 1.3rem;
+    border: .5px solid black;
+    box-shadow: inset 3px 3px 5px white, inset -3px -3px 5px #cfcfcf;
+}
