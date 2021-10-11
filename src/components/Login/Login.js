@@ -1,6 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { Link } from 'react-router-dom';
+import { Link,useLocation,useHistory } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import './Login.css'
 
@@ -8,6 +8,17 @@ import './Login.css'
 const Login = () => {
     const {googleSignIn} = useAuth()
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const location = useLocation();
+    const history = useHistory()
+    const redirect_url = location.state?.from || '/home'
+
+
+    const handleGoogleSign = () => {
+        googleSignIn()
+        .then(res => {
+            history.push(redirect_url)
+        })
+    }
 
     const onSubmit = data => {
         console.log(data);
@@ -27,7 +38,7 @@ const Login = () => {
                     <input className="inputBtn" type="submit" />
                     <small style={{margin: '.7rem'}}>First time in this site?</small>
                     <Link to="/register">Register Now</Link><br />
-                    <button className="googleBtn" onClick={googleSignIn}>Google Sign in</button>
+                    <button className="googleBtn" onClick={handleGoogleSign}>Google Sign in</button>
                 </form>
                 <div className="tik">
                 <img style={{width:'100%',height:'100%'}} src="https://phoneky.co.uk/thumbs/screensavers/down/anime/cartoon_xjmfxo3b.gif" alt="" />

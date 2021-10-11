@@ -14,7 +14,7 @@ const Register = () => {
     return (
         <div className="react_form">
             <form style={{width:'90%'}} onSubmit={handleSubmit(onSubmit)}>
-                <h1 style={{textAlign:'center',color:'rgba(247, 63, 30, 0.945)'}}>Please Log in first</h1>
+                <h1 style={{textAlign:'center',color:'rgba(247, 63, 30, 0.945)'}}>Please Register first</h1>
                 <input className="inputGroup" defaultValue={user.displayName} placeholder="Your Name" {...register("name")} />
                 <input className="inputGroup" defaultValue={user.email} placeholder="Your Email" {...register("email", { required: true })} />
                 {errors.email && <span style={{color:'red',margin: '.7rem'}}>User email is required</span>}

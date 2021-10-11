@@ -29,17 +29,26 @@ const useFireBase = () => {
 
     // google signin function start 
     const googleSignIn = () => {
-        signInWithPopup(auth,googleProvider)
-        .then(res => {
-            setUser(res.user)
-            console.log(res.user)
-            // window.location.reload()
-        })
-        .catch((err) => {
-            setErr(err)
-          });
+        return signInWithPopup(auth,googleProvider)
+        
         }
     // google signin function end 
+
+
+
+
+    // using effect for changing states start 
+    useEffect(()=>{
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user)
+            }
+            });
+    },[])
+    // using effect for changing states start 
+
+
+
 
 
 
