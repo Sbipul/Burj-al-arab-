@@ -1,0 +1,35 @@
+.singleCard {
+    width: 70%;
+    height: 350px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px auto;
+    position: relative;
+}
+.gridCard {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 15px;
+    margin: 0 40px;
+}
+
+.hoverDiv {
+    position: absolute;
+    content: "";
+    height: 48%;
+    width: 60%;
+    background: #0000008c;
+    top: 83px;
+    border-radius: 50%;
+    left: 20%;
+    transition: 0.5s;
+}
+
+.singleCard:hover .hoverDiv {
+    height: 100%;
+    width: 100%;
+    background: #58585875;
+    top: 0px;
+    border-radius: 0%;
+    left: 0%;
+}
