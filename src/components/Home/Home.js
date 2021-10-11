@@ -40,11 +40,19 @@ const Home = () => {
         }
     ]
     return (
-        <div style={style}>
-            {
-                rooms.map(room => <Room key={room.bedType} room={room}></Room>)
-            }
-        </div>
+        <>
+            <div className="text_center">
+                <h1 style={{textAlign:'center'}}>Choose your room</h1>
+                <p>Some hotels require you to cancel more than 24 hours before check-in. Details on site.
+                    * The value of 1 reward night is the average price of the 10 stamps you collect. Excludes taxes and fees. A $5.00 redemption fee is charged for each reward night redeemed unless you redeem on our app. Exclusions apply. See terms and conditions.
+                </p>
+            </div>
+            <div style={style}>
+                {
+                    rooms.map(room => <Room key={room.bedType} room={room}></Room>)
+                }
+            </div>
+        </>
     );
 };
 

@@ -1,25 +1,64 @@
-
+h1,h2,h3,h4{
+  margin: 0;
+  padding: 5px 0;
+}
 .title-container{
-    color: rgba(255, 255, 255, 0.699);
+    color: rgb(255, 255, 255);
     text-align: center;
     font-size: 2em;
+    background-image: url('https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bHV4dXJ5JTIwaG90ZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80');
+    height: 40vh;
+    background-size: 100%;
+    position: relative;
+    z-index: 3;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.title-container::after{
+  background: rgba(0, 0, 0, 0.452);
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+
 }
 .nav{
-    margin: 0 60px;
+    padding: 20px 40px;
+    clip-path: polygon(0 0, 73% 0, 76% 100%, 0% 100%);
+    background: rgb(238, 137, 78);
+}
+.nav ul {
+  margin: 0;
+}
+.header{
+  background: rgb(117, 117, 117);
 }
 .nav li{
     display: inline;
-    margin: 25px;
+    margin-right: 50px;
     
   }
   
   .nav a{
     text-decoration: none;
-    color: rgba(0, 0, 0, 0.877);
+    color: rgba(255, 255, 255, 0.945);
+    font-size: 20px;
     font-weight: bold;
   }
 .logoutBtn{
     margin: 0px 10px;
-    background: grey;
-    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: .5px solid rgba(247, 62, 30, 0);
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    background: rgba(255, 255, 255, 0.945);
+  }
+  .heading{
+    position: relative;
+    z-index: 9;
+    padding-top: 50px;
   }

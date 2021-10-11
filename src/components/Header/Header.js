@@ -28,8 +28,8 @@ const Header = () => {
                 </ul>
             </nav>
             <div className="title-container">
-                <h1>Burj Al Arab</h1>
-                <h2>A global icon of Arabian luxury</h2>
+                <h1 className="heading">{user.email ? user.displayName : 'Burj Al Arab'} <br />
+                    Welcome to Arabian luxury hotel</h1>
             </div>
         </div>
     );
